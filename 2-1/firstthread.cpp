@@ -7,7 +7,7 @@ void *threadFunc(void *arg)
 {
     int i;
     for(i = 0; i < 3; i++) {
-        std::cout << "I'm threadFunc" << std::endl;
+        std::cout << "I'm threadFunc:" << i << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     return nullptr;
@@ -23,7 +23,7 @@ int main()
     }
 
     for(i = 0; i < 5; i++) {
-        std::cout << "I'm main." << std::endl;
+        std::cout << "I'm main:" << i << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     return 0;
